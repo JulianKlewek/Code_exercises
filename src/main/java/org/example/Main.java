@@ -5,7 +5,7 @@ public class Main {
 
     }
 
-    public static boolean solution(String moves){
+    public boolean solution(String string){
         return false;
     }
 }
