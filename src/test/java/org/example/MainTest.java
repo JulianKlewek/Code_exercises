@@ -6,17 +6,19 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 class MainTest implements MainTestConstants {
 
+    private final Main main = new Main();
+
     @ParameterizedTest
-    @MethodSource("PROVIDE_VALID_DATA")
+    @MethodSource("PROVIDE_VALID_MOVES")
     void should_return_true(String moves) {
-        boolean result = Main.solution(moves);
+        boolean result = main.solution(moves);
         Assertions.assertTrue(result);
     }
 
     @ParameterizedTest
-    @MethodSource("PROVIDE_INVALID_DATA")
+    @MethodSource("PROVIDE_INVALID_MOVES")
     void should_return_false(String moves) {
-        boolean result = Main.solution(moves);
+        boolean result = main.solution(moves);
         Assertions.assertFalse(result);
     }
 }
