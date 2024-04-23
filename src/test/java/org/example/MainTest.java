@@ -10,15 +10,16 @@ class MainTest implements MainTestConstants {
 
     @ParameterizedTest
     @MethodSource("PROVIDE_VALID_DATA")
-    void should_return_true(String string) {
-        boolean result = main.solution(string);
-        Assertions.assertTrue(result);
+    void should_return_nth_element_of_fibonacci(int index, int expected) {
+        Integer result = main.solution(index);
+        Assertions.assertEquals(expected, result);
     }
 
     @ParameterizedTest
-    @MethodSource("PROVIDE_INVALID_DATA")
-    void should_return_false(String string) {
-        boolean result = main.solution(string);
-        Assertions.assertFalse(result);
+    @MethodSource("PROVIDE_VALID_DATA")
+    void should_return_nth_element_of_fibonacci_without_recurrence(int index, int expected) {
+        Integer result = main.solutionWithoutRecurrence(index);
+        Assertions.assertEquals(expected, result);
     }
+
 }
