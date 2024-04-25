@@ -10,15 +10,43 @@ class MainTest implements MainTestConstants {
 
     @ParameterizedTest
     @MethodSource("PROVIDE_VALID_DATA")
-    void should_return_true(String string) {
-        boolean result = main.solution(string);
+    void should_return_true(String word) {
+        boolean result = main.solution(word);
         Assertions.assertTrue(result);
     }
 
     @ParameterizedTest
     @MethodSource("PROVIDE_INVALID_DATA")
-    void should_return_false(String string) {
-        boolean result = main.solution(string);
+    void should_return_false(String word) {
+        boolean result = main.solution(word);
+        Assertions.assertFalse(result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("PROVIDE_VALID_DATA")
+    void should_return_true_for_2nd_method(String word) {
+        boolean result = main.solutionTwo(word);
+        Assertions.assertTrue(result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("PROVIDE_INVALID_DATA")
+    void should_return_false_for_2nd_method(String word) {
+        boolean result = main.solutionTwo(word);
+        Assertions.assertFalse(result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("PROVIDE_VALID_DATA")
+    void should_return_true_for_3rd_method(String word) {
+        boolean result = main.solutionThree(word);
+        Assertions.assertTrue(result);
+    }
+
+    @ParameterizedTest
+    @MethodSource("PROVIDE_INVALID_DATA")
+    void should_return_false_for_3rd_method(String word) {
+        boolean result = main.solutionThree(word);
         Assertions.assertFalse(result);
     }
 }
