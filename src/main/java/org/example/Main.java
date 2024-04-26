@@ -5,7 +5,8 @@ public class Main {
         //default impl
     }
 
-    public boolean solution(String string){
+    public boolean solution(Integer bigCount, Integer smallCount, Integer goal){
+
         return false;
     }
 }
