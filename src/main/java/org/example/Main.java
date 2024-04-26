@@ -5,7 +5,17 @@ public class Main {
         //default impl
     }
 
-    public boolean solution(String string){
-        return false;
+    /**
+     * Algorytm euklidesa
+     * @param p
+     * @param q
+     * @return
+     */
+    public int solution(Integer p, Integer q){
+        if(q == 0){
+            return p;
+        }
+
+        return solution(q,p % q);
     }
 }
