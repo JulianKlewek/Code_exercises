@@ -5,7 +5,8 @@ public class Main {
         //default impl
     }
 
-    public boolean solution(String string){
-        return false;
+    public String solution(String code) {
+        final int rotation = 5;
+        return "false";
     }
 }

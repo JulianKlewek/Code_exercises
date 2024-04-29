@@ -13,12 +13,4 @@ public interface MainTestConstants {
         );
     }
 
-    static Stream<Arguments> PROVIDE_INVALID_DATA() {
-        return Stream.of(
-                Arguments.of(),
-                Arguments.of()
-        );
-    }
-
-
 }
