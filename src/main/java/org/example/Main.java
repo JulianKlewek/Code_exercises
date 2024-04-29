@@ -5,7 +5,7 @@ public class Main {
         //default impl
     }
 
-    public int solution(Integer bigCount, Integer smallCount, Integer goal){
+    public int getNumberSmallBags(Integer bigCount, Integer smallCount, Integer goal){
         int bigValue = 5;
 
         if (bigValue * bigCount + smallCount < goal){

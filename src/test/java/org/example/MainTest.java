@@ -11,7 +11,7 @@ class MainTest implements MainTestConstants {
     @ParameterizedTest
     @MethodSource("PROVIDE_VALID_DATA")
     void should_return_true(Integer big, Integer small, Integer goal, Integer expected) {
-        int result = main.solution(big, small, goal);
+        int result = main.getNumberSmallBags(big, small, goal);
         Assertions.assertEquals(expected, result);
     }
 
