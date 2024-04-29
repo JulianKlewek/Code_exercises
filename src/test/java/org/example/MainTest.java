@@ -10,15 +10,9 @@ class MainTest implements MainTestConstants {
 
     @ParameterizedTest
     @MethodSource("PROVIDE_VALID_DATA")
-    void should_return_true(Integer big, Integer small, Integer goal) {
-        boolean result = main.solution(big, small, goal);
-        Assertions.assertTrue(result);
+    void should_return_true(Integer big, Integer small, Integer goal, Integer expected) {
+        int result = main.solution(big, small, goal);
+        Assertions.assertEquals(expected, result);
     }
 
-    @ParameterizedTest
-    @MethodSource("PROVIDE_INVALID_DATA")
-    void should_return_false(Integer big, Integer small, Integer goal) {
-        boolean result = main.solution(big, small, goal);
-        Assertions.assertFalse(result);
-    }
 }

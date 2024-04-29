@@ -5,8 +5,15 @@ public class Main {
         //default impl
     }
 
-    public boolean solution(Integer bigCount, Integer smallCount, Integer goal){
+    public int solution(Integer bigCount, Integer smallCount, Integer goal){
+        int bigValue = 5;
 
-        return false;
+        if (bigValue * bigCount + smallCount < goal){
+            return -1;
+        } else if (bigValue * bigCount >= goal && smallCount >= goal % 5) {
+            return goal % 5;
+        }
+
+        return goal - (bigCount * bigValue);
     }
 }
