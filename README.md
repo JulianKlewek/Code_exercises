@@ -6,8 +6,9 @@ Implement a decoder for the Ceasar cipher where N = 5.
 
 TIP: Use code.toCharArray() to get an array of characters.
 
-```java
-public String decode(String code) {
+````java
+
+public String decode(String code, int shift) {
     
 }
 ```
