@@ -11,12 +11,15 @@ public class Main {
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < alphabet.length; i++) {
-            if(i + shift > alphabet.length - 1){
-                int newIndex = i + shift - alphabet.length;
-                shiftedAlphabet[i] = alphabet[newIndex];
-            }else{
-                shiftedAlphabet[i] = alphabet[i + shift];
-            }
+//            if(i + shift > alphabet.length - 1){
+//                int newIndex = i + shift - alphabet.length;
+//                shiftedAlphabet[i] = alphabet[newIndex];
+//            }else{
+//                shiftedAlphabet[i] = alphabet[i + shift];
+//            }
+            // with ? : operator
+            shiftedAlphabet[i] = i + shift > alphabet.length - 1 ?
+                    alphabet[i + shift - alphabet.length] : alphabet[i + shift];
         }
 
         for (char c: code.toCharArray()) {
@@ -32,13 +35,12 @@ public class Main {
 
     public String solutionTwo(String code, int shift) {
         int alphabetLength = 'z' - 'a' + 1;
-        char[] alphabet = new char[alphabetLength];
         StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < alphabetLength; i++) {
-            alphabet[i] = (char) ('a' + i);
+        for (char c: code.toCharArray()) {
+            int charIndex = c + shift < 'z' ? c + shift : c + shift - alphabetLength;
+            result.append((char)charIndex);
         }
-        System.out.println(alphabet);
 
         return result.toString();
     }
