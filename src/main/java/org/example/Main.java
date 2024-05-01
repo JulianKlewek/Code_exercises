@@ -1,8 +1,6 @@
 package org.example;
 
 
-import javax.swing.tree.TreeNode;
-
 public class Main {
     public static void main(String[] args) {
         //default impl
@@ -10,7 +8,11 @@ public class Main {
 
     //region exercise 1
     public Integer getNumberOfNodes(TreeNode node) {
-        return 0;
+        if(node == null){
+            return 0;
+        }
+
+        return 1 + getNumberOfNodes(node.left()) + getNumberOfNodes(node.right());
     }
     //endregion
 
