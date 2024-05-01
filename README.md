@@ -10,7 +10,15 @@ public Integer getNumberOfNodes(TreeNode node) {
 }
 ```
 
+# Binary Tree Depth
 
+Write a method that returns the maximum depth of a binary tree. The maximum depth is the number of nodes from the root (inclusive) until the furthest node (inclusive).
+
+````
+public Integer depthBinaryTree(TreeNode node) {
+
+}
+````
 
 # Strict Binary Tree Check
 

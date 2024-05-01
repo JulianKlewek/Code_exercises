@@ -17,9 +17,26 @@ public class Main {
     //endregion
 
     //region exercise 2
+
+    public Integer depthBinaryTree(TreeNode node) {
+        if(node == null){
+            return 0;
+        }
+
+        return 1 + Math.max(depthBinaryTree(node.left()), depthBinaryTree(node.right()));
+    }
+    //endregion
+
+    //region exercise 3
     public boolean isStrictTree(TreeNode node){
-//        node.left()
-        return false;
+        if (node == null){
+            return true;
+        }
+        if((node.left() == null && node.right() != null) || (node.left() != null && node.right() == null)){
+            return false;
+        }
+
+        return isStrictTree(node.left()) && isStrictTree(node.right());
     }
 
     //endregion

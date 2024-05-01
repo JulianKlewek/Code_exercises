@@ -16,16 +16,17 @@ class MainTest implements MainTestConstants {
     }
 
     @ParameterizedTest
-    @MethodSource("PROVIDE_DATA_FOR_IS_STRICT_TREE")
-    void should_return_true_when_strict_tree(TreeNode node) {
-        boolean result = main.isStrictTree(node);
-        Assertions.assertTrue(result);
+    @MethodSource("PROVIDE_DATA_FOR_DEPTH_BINARY_TREE")
+    void should_return_binary_tree_depth(TreeNode node, int expected) {
+        Integer numberOfNodes = main.depthBinaryTree(node);
+        Assertions.assertEquals(expected, numberOfNodes);
     }
 
     @ParameterizedTest
-    @MethodSource("PROVIDE_INVALID_DATA")
-    void should_return_false_when_strict_tree(TreeNode node) {
+    @MethodSource("PROVIDE_DATA_FOR_IS_STRICT_TREE")
+    void should_return_true_when_strict_tree(TreeNode node, boolean expected) {
         boolean result = main.isStrictTree(node);
-        Assertions.assertFalse(result);
+        Assertions.assertEquals(result, expected);
     }
+
 }
