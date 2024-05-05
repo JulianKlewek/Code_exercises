@@ -34,10 +34,13 @@ public interface MainTestConstants {
         );
     }
 
-    static Stream<Arguments> PROVIDE_INVALID_DATA() {
+    static Stream<Arguments> PROVIDE_DATA_FOR_IS_PERFECT_TREE() {
         return Stream.of(
-                Arguments.of(),
-                Arguments.of()
+                Arguments.of(new TreeNode(), true),
+                Arguments.of(new TreeNode(new TreeNode(),null), false),
+                Arguments.of(new TreeNode(new TreeNode(),new TreeNode()), true),
+                Arguments.of(new TreeNode(new TreeNode(new TreeNode(), null),new TreeNode()), false),
+                Arguments.of(new TreeNode(new TreeNode(new TreeNode(), new TreeNode()),new TreeNode()), false)
         );
     }
 

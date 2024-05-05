@@ -29,5 +29,17 @@ TreeNode API methods: node.left() and node.right().
 ```
 public Boolean isStrictTree(TreeNode node) {
     
-        }
+}
+```
+
+# Perfect Binary Tree Check
+
+A binary tree is perfect when all levels are complete.
+Write a method that checks if a binary tree is perfect.
+TreeNode API methods: node.left() and node.right().
+
+```
+public Boolean isPerfectTree(TreeNode node) {
+    
+}
 ```

@@ -29,4 +29,11 @@ class MainTest implements MainTestConstants {
         Assertions.assertEquals(result, expected);
     }
 
+    @ParameterizedTest
+    @MethodSource("PROVIDE_DATA_FOR_IS_PERFECT_TREE")
+    void should_return_true_when_perfect_tree(TreeNode node, boolean expected) {
+        boolean result = main.isPerfectTree(node);
+        Assertions.assertEquals(result, expected);
+    }
+
 }
