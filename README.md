@@ -43,3 +43,15 @@ public Boolean isPerfectTree(TreeNode node) {
     
 }
 ```
+
+# Complete Binary Tree Check
+
+A binary tree is complete when all levels apart from the last are filled and all leaf nodes in the last level are aligned to the left.
+Write a method that checks if a binary tree is complete.
+TreeNode API methods: node.left() and node.right().
+
+```
+public Boolean isCompleteTree(TreeNode node) {
+    
+}
+```

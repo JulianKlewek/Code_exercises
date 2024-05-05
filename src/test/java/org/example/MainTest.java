@@ -36,4 +36,11 @@ class MainTest implements MainTestConstants {
         Assertions.assertEquals(result, expected);
     }
 
+    @ParameterizedTest
+    @MethodSource("PROVIDE_DATA_FOR_IS_COMPLETE_BINARY_TREE")
+    void should_return_true_when_complete_binary_tree(TreeNode node, boolean expected) {
+        boolean result = main.isCompleteTree(node);
+        Assertions.assertEquals(result, expected);
+    }
+
 }

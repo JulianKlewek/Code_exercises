@@ -67,4 +67,15 @@ public class Main {
         return node.left() != null ? 1 + perfectTreeDepth(node.left()) : 1;
     }
     //endregion
+
+    //region exercise 5
+    public Boolean isCompleteTree(TreeNode node){
+
+        // ZROBIĆ TO ZADANIE, \/ NA TEJ STRONIE CHYBA JEST BŁĄD W WYNIKU
+        // https://code-exercises.com/programming/hard/27/complete-binary-tree-check
+        // \/ TO MOZE BYĆ POMOCNE
+        // https://www.geeksforgeeks.org/complete-binary-tree/
+        return false;
+    }
+    //endregion
 }

@@ -44,5 +44,16 @@ public interface MainTestConstants {
         );
     }
 
+    static Stream<Arguments> PROVIDE_DATA_FOR_IS_COMPLETE_BINARY_TREE() {
+        return Stream.of(
+                Arguments.of(new TreeNode(), true),
+                Arguments.of(new TreeNode(null, new TreeNode()), false),
+                Arguments.of(new TreeNode(new TreeNode(),null), true),
+                Arguments.of(new TreeNode(new TreeNode(),new TreeNode()), true),
+                Arguments.of(new TreeNode(new TreeNode(new TreeNode(), null),new TreeNode()), true),
+                Arguments.of(new TreeNode(new TreeNode(), new TreeNode(new TreeNode(), new TreeNode())), false)
+        );
+    }
+
 
 }
