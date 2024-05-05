@@ -10,15 +10,9 @@ class MainTest implements MainTestConstants {
 
     @ParameterizedTest
     @MethodSource("PROVIDE_VALID_DATA")
-    void should_return_true(String string) {
-        boolean result = main.solution(string);
-        Assertions.assertTrue(result);
+    void should_return_longest_common_sequence(String string1, String string2, String expected) {
+        String result = main.findLongestCommonSequence(string1, string2);
+        Assertions.assertEquals(expected, result);
     }
 
-    @ParameterizedTest
-    @MethodSource("PROVIDE_INVALID_DATA")
-    void should_return_false(String string) {
-        boolean result = main.solution(string);
-        Assertions.assertFalse(result);
-    }
 }
