@@ -21,5 +21,15 @@ public interface MainTestConstants {
         );
     }
 
+    static Stream<Arguments> PROVIDE_DATA_FOR_LARGEST_PRIME_FACTOR() {
+        return Stream.of(
+                Arguments.of(455, 13),
+                Arguments.of(21, 7),
+                Arguments.of(2, 2),
+                Arguments.of(55, 11),
+                Arguments.of(1015, 29),
+                Arguments.of(13195, 29)
+        );
+    }
 
 }

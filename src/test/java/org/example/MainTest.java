@@ -21,4 +21,11 @@ class MainTest implements MainTestConstants {
         boolean result = main.solution(i);
         Assertions.assertFalse(result);
     }
+
+    @ParameterizedTest
+    @MethodSource("PROVIDE_DATA_FOR_LARGEST_PRIME_FACTOR")
+    void should_return_true(Integer i, int expected) {
+        Integer result = main.largestPrimeFactor(i);
+        Assertions.assertEquals(expected, result);
+    }
 }

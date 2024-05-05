@@ -5,6 +5,8 @@ public class Main {
         //default impl
     }
 
+
+    //region exercise 1
     public boolean solution(Integer i){
         for (int j = 2; j < i; j++) {
             if(i%j == 0){
@@ -13,4 +15,15 @@ public class Main {
         }
         return true;
     }
+
+    //endregion
+
+    //region exercise 2
+    public Integer largestPrimeFactor(Integer n) {
+
+
+        return 0;
+    }
+
+    //endregion
 }
