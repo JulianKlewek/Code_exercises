@@ -22,5 +22,17 @@ public interface MainTestConstants {
         );
     }
 
+    static Stream<Arguments> PROVIDE_DATA_FOR_LONGEST_PALINDROME() {
+        return Stream.of(
+                Arguments.of("baba", "bab"),
+                Arguments.of("alllllll", "lllllll"),
+                Arguments.of("abattd", "aba"),
+                Arguments.of("abc", "a"),
+                Arguments.of("abcba", "abcba"),
+                Arguments.of("thhwerw", "hh"),
+                Arguments.of("kamilslimak", "kamilslimak")
+        );
+    }
+
 
 }

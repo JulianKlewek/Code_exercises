@@ -49,4 +49,11 @@ class MainTest implements MainTestConstants {
         boolean result = main.solutionThree(word);
         Assertions.assertFalse(result);
     }
+
+    @ParameterizedTest
+    @MethodSource("PROVIDE_DATA_FOR_LONGEST_PALINDROME")
+    void should_return_longest_palindrome(String word, String expectedPalindrome) {
+        String result = main.findLongestPalindrome(word);
+        Assertions.assertEquals(expectedPalindrome, result);
+    }
 }
