@@ -25,5 +25,15 @@ public interface MainTestConstants {
         );
     }
 
+    static Stream<Arguments> PROVIDE_VALID_DATA_TWO_NUMBERS_WITHOUT_ZEROS_WHICH_SUMS_TO_TARGET() {
+        return Stream.of(
+                Arguments.of(100),
+                Arguments.of(19312),
+                Arguments.of(205),
+                Arguments.of(3),
+                Arguments.of(123),
+                Arguments.of(199)
+        );
+    }
 
 }

@@ -25,4 +25,14 @@ class MainTest implements MainTestConstants {
         Assertions.assertFalse(result);
     }
 
+    @DisplayName("Valid two numbers sum")
+    @ParameterizedTest
+    @MethodSource("PROVIDE_VALID_DATA_TWO_NUMBERS_WITHOUT_ZEROS_WHICH_SUMS_TO_TARGET")
+    void should_return_true_if_numbers_does_not_contain_zeros_and_sums_to_target(int target) {
+        int[] result = main.findTwoNumbersWithoutZerosWhichSumsToTarget(target);
+
+        Assertions.assertEquals(target, Integer.sum(result[0], result[1]));
+        Assertions.assertFalse(String.valueOf(result[0]).contains("0"));
+        Assertions.assertFalse(String.valueOf(result[1]).contains("0"));
+    }
 }
