@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -29,5 +28,14 @@ public class Main {
         result[1] = secondNumber;
 
         return result;
+    }
+
+    public boolean isMagicSquare(int[][] matrix){
+        boolean magicSquare = false;
+        int sum;
+
+
+
+        return magicSquare;
     }
 }
